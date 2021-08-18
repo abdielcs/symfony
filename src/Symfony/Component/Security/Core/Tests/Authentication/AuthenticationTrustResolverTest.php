@@ -18,6 +18,7 @@ use Symfony\Component\Security\Core\Authentication\Token\RememberMeToken;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\User\InMemoryUser;
 use Symfony\Component\Security\Core\User\User;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class AuthenticationTrustResolverTest extends TestCase
 {
@@ -176,7 +177,7 @@ class FakeCustomToken implements TokenInterface
     {
     }
 
-    public function getUser()
+    public function getUser(): UserInterface
     {
     }
 

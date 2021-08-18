@@ -23,7 +23,7 @@ class WebProfilerBundleKernel extends Kernel
         parent::__construct('test', false);
     }
 
-    public function registerBundles()
+    public function registerBundles(): iterable
     {
         return [
             new FrameworkBundle(),
@@ -54,12 +54,12 @@ class WebProfilerBundleKernel extends Kernel
         ]);
     }
 
-    public function getCacheDir()
+    public function getCacheDir(): string
     {
         return sys_get_temp_dir().'/cache-'.spl_object_hash($this);
     }
 
-    public function getLogDir()
+    public function getLogDir(): string
     {
         return sys_get_temp_dir().'/log-'.spl_object_hash($this);
     }

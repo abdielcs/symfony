@@ -24,7 +24,7 @@ use Symfony\Bundle\FrameworkBundle\Command\ConfigDumpReferenceCommand;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerDebugCommand;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerLintCommand;
 use Symfony\Bundle\FrameworkBundle\Command\DebugAutowiringCommand;
-use Symfony\Bundle\FrameworkBundle\Command\DumpEnvCommand;
+use Symfony\Bundle\FrameworkBundle\Command\DotenvDumpCommand;
 use Symfony\Bundle\FrameworkBundle\Command\EventDispatcherDebugCommand;
 use Symfony\Bundle\FrameworkBundle\Command\RouterDebugCommand;
 use Symfony\Bundle\FrameworkBundle\Command\RouterMatchCommand;
@@ -317,7 +317,7 @@ return static function (ContainerConfigurator $container) {
             ])
             ->tag('console.command')
 
-        ->set('console.command.env_dump', DumpEnvCommand::class)
+        ->set('console.command.dotenv_dump', DotenvDumpCommand::class)
             ->tag('console.command')
     ;
 };
